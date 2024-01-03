@@ -1,0 +1,5 @@
+use db;
+
+CREATE TABLE tableaux  (
+	id BIGINT  NOT NULL PRIMARY KEY
+) ENGINE=InnoDB;
