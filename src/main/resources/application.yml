@@ -1,5 +1,26 @@
+app:
+  main:
+    pollerFrequency : 5
+    pollerCron : '*/5 * * * * *'
+    threadPoolSize: 1
+    channelPoolSize: 5
+    dataIn: C:/outilsDev/projets/server/in
+    dataOut: C:/outilsDev/projets/server/out
+    fileRegexPattern: .*
+
 application:
   name: test
+
+management:
+  security:
+    enabled: false
+  endpoint:
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: refresh, configprops
 
 spring:
   datasource:
