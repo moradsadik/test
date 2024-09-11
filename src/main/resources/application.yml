@@ -1,9 +1,9 @@
 app:
   main:
     pollerFrequency : 5
-    pollerCron : '*/5 * * * * *'
-    threadPoolSize: 1
-    channelPoolSize: 5
+    pollerCron : '*/10 * * * * *'
+    threadPoolSize: 5
+    channelPoolSize: 1
     dataIn: C:/outilsDev/projets/server/in
     dataOut: C:/outilsDev/projets/server/out
     fileRegexPattern: .*
@@ -12,23 +12,23 @@ application:
   name: test
 
 management:
-  security:
-    enabled: false
   endpoint:
     refresh:
       enabled: true
   endpoints:
     web:
       exposure:
-        include: refresh, configprops
+        include: refresh, configprops, beans
 
-spring:
-  datasource:
-    url: jdbc:mariadb://localhost:3306/db
-    username: root
-    password: root
-    driver-class-name: org.mariadb.jdbc.Driver
+#spring:
+#  datasource:
+#    url: jdbc:mariadb://localhost:3306/db
+#    username: root
+#    password: root
+#    driver-class-name: org.mariadb.jdbc.Driver
 
-  jpa:
-    database-platform: org.hibernate.dialect.MariaDBDialect
-    show-sql: true
+#  jpa:
+#    database-platform: org.hibernate.dialect.MariaDBDialect
+#    show-sql: true
+
+
